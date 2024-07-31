@@ -5,8 +5,7 @@ using namespace lspserver;
 
 namespace nixd {
 
-int getLSPSeverity(nixf::Diagnostic::DiagnosticKind Kind) {
-  switch (nixf::Diagnostic::severity(Kind)) {
+int getLSPSeverity(nixf::Diagnostic::DiagnosticKind Kind) { switch (nixf::Diagnostic::severity(Kind)) {
   case nixf::Diagnostic::DS_Fatal:
   case nixf::Diagnostic::DS_Error:
     return 1;
