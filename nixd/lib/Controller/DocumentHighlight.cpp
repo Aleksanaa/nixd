@@ -39,9 +39,8 @@ std::vector<DocumentHighlight> highlight(const nixf::Node &Desc,
     });
   }
   if (Def.syntax()) {
-    const Node &Syntax = *Def.syntax();
-    Highlights.emplace_back(DocumentHighlight{
-        .range = toLSPRange(Syntax.range()),
+    const Node &Syntax = *Def.syntax();Highlights.emplace_back(DocumentHighlight{
+   .range = toLSPRange(Syntax.range()),
         .kind = DocumentHighlightKind::Write,
     });
   }
