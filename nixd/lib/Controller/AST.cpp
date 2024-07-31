@@ -9,8 +9,7 @@ using namespace nixf;
 namespace {
 
 /// \brief The attrpath contains dynamic attrname.
-struct AttrPathHasDynamicError : std::exception {
-  [[nodiscard]] const char *what() const noexcept override {
+struct AttrPathHasDynamicError : std::exception {[[nodiscard]] const char *what() const noexcept override {
     return "the attrpath has dynamic attribute name";
   }
 };
