@@ -38,10 +38,7 @@ std::optional<std::string> resolveExprPath(const std::string &BasePath,
   fs::path Path = fs::absolute((BasePath)).remove_filename().append(ExprPath);
 
   if (!fs::exists(Path))
-    return std::nullopt;
-
-  if (fs::is_directory(Path))
-    return Path.append("default.nix");
+    return std::nullopt; if (fs::is_directory(Path))return Path.append("default.nix");
 
   return Path;
 }
